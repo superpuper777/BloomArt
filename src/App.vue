@@ -4,19 +4,27 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <Header />
-  <main>
-    <RouterView />
-  </main>
-  <Footer />
+  <div class="page-container">
+    <Header />
+    <main class="content">
+      <RouterView />
+    </main>
+    <Footer />
+  </div>
 </template>
 
 <style scoped>
-/* main {
+.page-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f0f0f0;
-} */
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  overflow: hidden;
+}
+footer {
+  margin-top: auto;
+}
 </style>

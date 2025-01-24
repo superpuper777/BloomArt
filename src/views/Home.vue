@@ -3,7 +3,5 @@ import Animation from '../components/Animation.vue';
 </script>
 
 <template>
-  <main>
-    <Animation />
-  </main>
+  <Animation />
 </template>

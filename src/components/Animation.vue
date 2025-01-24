@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const name = ref('Miss Fevrier art'.toUpperCase().split(''));
+const name = ref('Get Inspired'.toUpperCase().split(''));
 </script>
 
 <template>
@@ -46,8 +46,7 @@ const name = ref('Miss Fevrier art'.toUpperCase().split(''));
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  /* background: #2facf6; */
+  /* min-height: calc(100vh - 100px); */
 }
 
 .letters {
@@ -59,13 +58,13 @@ const name = ref('Miss Fevrier art'.toUpperCase().split(''));
   font-size: 48px;
   font-weight: bold;
   color: #fff;
-  background: #c687ca;
+  background: #4b7279;
   width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 
   transform: scale(0) translateY(0);
