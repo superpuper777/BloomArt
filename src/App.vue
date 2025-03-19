@@ -1,6 +1,20 @@
-<script setup lang="ts">
+<script setup>
+import { ref } from 'vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
+import FloatingButton from './components/FloatingButton.vue';
+import Modal from './components/Modal.vue'
+import ImageUpload from './components/ImageUpload.vue';
+
+const showModal = ref(false);
+
+const openModal = () => {
+  showModal.value = true;
+};
+
+const closeModal = () => {
+  showModal.value = false;
+};
 </script>
 
 <template>
@@ -8,8 +22,12 @@ import Footer from './components/Footer.vue';
     <Header />
     <main class="content">
       <RouterView />
+      <Modal v-if="showModal" @close="closeModal" title="Upload file">
+        <ImageUpload/>
+      </Modal>
     </main>
     <Footer />
+    <FloatingButton :openModal="openModal"/>
   </div>
 </template>
 
