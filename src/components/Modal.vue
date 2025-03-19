@@ -22,13 +22,12 @@ const props = defineProps(['title'])
 
 <style scoped>
 .modal-overlay {
-
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: var(--vt-c-black-soft); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,11 +36,12 @@ const props = defineProps(['title'])
 
 .modal-content {
   position: relative;
-  background-color: white;
+  background-color: var(--modal-box-background);
   padding: 20px;
   border-radius: 10px;
   width: 400px;
   text-align: center;
+  box-shadow: var(--modal-box-shadow);
 }
 
 .button-close {

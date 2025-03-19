@@ -66,8 +66,8 @@ const handleFileChange = () => {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #cacaca;
-  background-color: rgba(255, 255, 255, 1);
+  border: 2px dashed #849c97;
+  /* background-color: rgba(255, 255, 255, 1); */
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
@@ -81,7 +81,7 @@ const handleFileChange = () => {
 
 .custum-file-upload .icon svg {
   height: 80px;
-  fill: rgba(75, 85, 99, 1);
+  fill: var(--color-text);
 }
 
 .custum-file-upload .text {
@@ -92,7 +92,7 @@ const handleFileChange = () => {
 
 .custum-file-upload .text span {
   font-weight: 400;
-  color: rgba(75, 85, 99, 1);
+  color: var(--color-text);
 }
 
 .file-name {
