@@ -1,6 +1,5 @@
 <script setup>
 import { defineEmits } from 'vue';
-import ImageUpload from '../components/ImageUpload.vue'
 
 const emit = defineEmits();
 const props = defineProps(['title'])
@@ -27,7 +26,6 @@ const props = defineProps(['title'])
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-color: var(--vt-c-black-soft); */
   display: flex;
   justify-content: center;
   align-items: center;
