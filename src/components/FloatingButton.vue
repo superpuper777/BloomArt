@@ -18,7 +18,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #278071;
+    background-color: var(--vt-c-main-yellow-soft);
     color: white;
     border: none;
     border-radius: 50%;
@@ -32,11 +32,11 @@
   }
   
   .floating-button:hover {
-    background-color: #0c5c4f;
+    background-color: var(--vt-c-main-yellow);
   }
 
   .floating-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(40, 159, 167, 0.25);
+  box-shadow: 0 0 0 3px var(--vt-c-main-yellow-mute);
   }
   </style>

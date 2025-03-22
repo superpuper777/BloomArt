@@ -58,7 +58,7 @@ const name = ref('Get Inspired'.toUpperCase().split(''));
   font-size: 48px;
   font-weight: bold;
   color: #fff;
-  background: #4b7279;
+  background: var(--vt-c-main-blue-soft);
   width: 60px;
   height: 60px;
   display: flex;

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, provide } from 'vue';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import FloatingButton from './components/FloatingButton.vue';
@@ -15,6 +15,8 @@ const openModal = () => {
 const closeModal = () => {
   showModal.value = false;
 };
+
+provide('close', closeModal);
 </script>
 
 <template>
@@ -22,7 +24,7 @@ const closeModal = () => {
     <Header />
     <main class="content">
       <RouterView />
-      <Modal v-if="showModal" @close="closeModal" title="Upload file">
+      <Modal v-if="showModal" title="Upload file">
         <ImageUpload/>
       </Modal>
     </main>

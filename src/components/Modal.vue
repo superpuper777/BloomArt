@@ -1,16 +1,16 @@
 <script setup>
-import { defineEmits } from 'vue';
+import { inject } from 'vue';
 
-const emit = defineEmits();
+const closeModal = inject('close');
 const props = defineProps(['title'])
 </script>
 
 <template>
-  <div class="modal-overlay" @click.self="emit('close')">
+  <div class="modal-overlay">
     <div class="modal-content">
       <h2>{{props.title}}</h2>
       <slot></slot>
-      <button @click="emit('close')" class="button-close">
+      <button @click="closeModal" class="button-close">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="close-icon">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
@@ -43,7 +43,7 @@ const props = defineProps(['title'])
 }
 
 .button-close {
-  background: transparent;
+ background: inherit;
   border: none;
   position: absolute;
   top: 20px;
@@ -60,6 +60,6 @@ const props = defineProps(['title'])
 .close-icon {
   width: 24px;
   height: 24px;
-  stroke: #333;
+  color: var(--color-icon);
 }
 </style>

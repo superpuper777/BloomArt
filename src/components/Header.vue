@@ -65,15 +65,15 @@ const toggleTheme = () => {
   font-weight: 500;
   transition: color 0.3s ease;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .header__link:hover {
-  color: #567ba3;
+  color:  var(--vt-c-main-yellow-soft);
 }
 
 .header__link:active {
-  color: #32557a;
+  color: var(--vt-c-main-yellow);
 }
 
 .theme-toggle__button {
