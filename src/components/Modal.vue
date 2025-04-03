@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import { inject } from 'vue';
 
-const closeModal = inject('close');
+const closeModal = inject<(() => void) | undefined>('close');
 const props = defineProps(['title'])
 </script>
 

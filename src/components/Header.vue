@@ -1,5 +1,4 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
 import { useThemeStore } from "@/store/themeStore";
 
 const themeStore = useThemeStore();

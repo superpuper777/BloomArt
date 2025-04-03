@@ -1,10 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
 
-const apiUrl = import.meta.env.VITE_API_URL;
+type Image = {
+  id: number;
+  filename: string;
+  path: string;
+}
 
-const images = ref([]);
+const apiUrl = import.meta.env.VITE_API_URL;
+const images = ref<Image[]>([]);
+
 const fetchImages = async () => {
       try {
         const response = await axios.get(`${apiUrl}/images`);
@@ -16,7 +22,7 @@ const fetchImages = async () => {
       }
     };
 
-    const getImageUrl = (path) => {
+    const getImageUrl = (path: string) => {
       return `${apiUrl}/${path.replace(/\\/g, '/')}`;
     };
 

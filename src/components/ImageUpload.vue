@@ -1,16 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import { ref, inject } from "vue";
 import axios from "axios";
 
-const closeModal = inject('close');
+const closeModal = inject<(() => void) | undefined>("close"); 
 
-const fileName = ref("");
-const fileInput = ref(null);
+const fileName = ref<string>("");
+const fileInput = ref<HTMLInputElement | null>(null);
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
 const uploadImage = async () => {
-  const file = fileInput.value.files[0];
+  const file = fileInput.value?.files?.[0];
   if (file) {
     console.log("Uploading file:", file.name);
     const formData = new FormData();
@@ -30,7 +30,7 @@ const uploadImage = async () => {
       console.log("File uploaded:", response.data);
 
       if (response.data) {
-        closeModal();
+        closeModal?.();
       }
 
     } catch (error) {
@@ -40,7 +40,7 @@ const uploadImage = async () => {
 };
 
 const handleFileChange = () => {
-  const file = fileInput.value.files[0];
+  const file = fileInput.value?.files?.[0];
   if (file) {
     fileName.value = file.name;
   }

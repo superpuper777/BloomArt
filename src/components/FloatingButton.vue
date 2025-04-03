@@ -1,7 +1,9 @@
-<script setup>
+<script setup lang="ts">
+import type { PropType } from 'vue';
+
  const props = defineProps({
   openModal: {
-    type: Function,
+    type: Function as PropType<(event: MouseEvent) => void>,
     required: true
   }
 });
